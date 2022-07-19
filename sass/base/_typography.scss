@@ -1,0 +1,30 @@
+body {
+  color: #777;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Lato", sans-serif;
+}
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 5rem;
+    letter-spacing: 3.5rem;
+    animation: moveInLeft 0.5s ease-in-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    margin-bottom: 4rem;
+    animation: moveInRight 0.5s ease-in-out;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  }
+}
