@@ -1,4 +1,13 @@
-.section-about {
-  background-color: $color-grey-light;
+.section {
   padding: 15rem 0;
+}
+
+.section-about, .section-tours {
+  background-color: $color-grey-light;
+}
+
+.section-features {
+  background-position: top;
+  background-size: cover;
+  background-image: linear-gradient(to right, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)), url("./../../img/nat-4.jpg");
 }
