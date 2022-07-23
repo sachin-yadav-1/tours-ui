@@ -86,66 +86,62 @@ body {
   font-size: 1.6rem; }
 
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-large {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u-margin-top-large {
-  margin-top: 8rem; }
+  margin-top: 8rem !important; }
 
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transition: all 0.4s; }
-
-.btn:link, .btn:visited {
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: transform 0.1s ease-in-out;
-  position: relative; }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.btn:hover {
-  transform: translateY(-0.3rem);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-  .btn:hover::after {
-    transform: scaleX(1.2) scaleY(1.4);
-    opacity: 0; }
-
-.btn--white {
-  color: #777;
-  background-color: #fff; }
-  .btn--white::after {
+.btn {
+  border: none; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.4s; }
+  .btn, .btn:link, .btn:visited {
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform 0.1s ease-in-out;
+    position: relative; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+    .btn:hover::after {
+      transform: scaleX(1.2) scaleY(1.4);
+      opacity: 0; }
+  .btn--white {
+    color: #777;
     background-color: #fff; }
-
-.btn--green {
-  color: #fff;
-  background-color: #55c57a; }
-  .btn--green::after {
+    .btn--white::after {
+      background-color: #fff; }
+  .btn--green {
+    color: #fff;
     background-color: #55c57a; }
-
-.btn-animated {
-  animation: moveInBottom 0.5s ease-in 0.3s;
-  animation-fill-mode: backwards; }
+    .btn--green::after {
+      background-color: #55c57a; }
+  .btn-animated {
+    animation: moveInBottom 0.5s ease-in 0.3s;
+    animation-fill-mode: backwards; }
 
 .btn-text:link, .btn-text:visited {
   padding: 3px;
@@ -412,6 +408,78 @@ body {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 3rem; }
+
+.form__radio-input {
+  opacity: 0;
+  visibility: hidden; }
+
+.form__radio-button {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #55c57a;
+  position: absolute;
+  left: 0;
+  top: -0.4rem; }
+  .form__radio-button::after {
+    height: 1.5rem;
+    width: 1.5rem;
+    content: "";
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #55c57a;
+    opacity: 0; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
+.footer {
+  padding: 10rem 0;
+  color: #fff;
+  background-color: #333; }
+  .footer__logo-box {
+    text-align: center; }
+  .footer__logo {
+    width: 20rem; }
+  .footer__nav {
+    border-top: 2px solid #777;
+    padding-top: 2rem; }
+  .footer__link {
+    text-decoration: none;
+    transition: all 0.1s ease-in; }
+    .footer__link:visited, .footer__link:active {
+      text-transform: uppercase;
+      color: #777;
+      font-size: 1.6rem; }
+    .footer__link:hover {
+      color: #55c57a; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 2rem; }
+  .footer__copyright {
+    color: #777;
+    border-top: 2px solid #777;
+    padding-top: 2rem; }
+  .footer__copyright .footer__link {
+    text-decoration: underline; }
 
 /**************************************************** 
 * COLORS
