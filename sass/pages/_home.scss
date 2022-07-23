@@ -1,5 +1,9 @@
 .section {
   padding: 15rem 0;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
 }
 
 .section-about, .section-tours {
@@ -25,13 +29,26 @@
 .book {
   border-radius: 5px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, .1);
-  background-size: cover;
+  background-size: 100%;
   background-image: linear-gradient(90deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 50%, transparent 50%), url('/img/nat-10.jpg');
 
-  height: 50rem;
+  @include respond(tab-land) {
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(90deg, rgba($color-white, .9) 0%, rgba($color-white, .9) 100%), url('/img/nat-10.jpg');
+  }
 
   &__form {
     width: 50%;
     padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }

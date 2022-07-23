@@ -16,6 +16,11 @@ body {
     font-weight: 5rem;
     letter-spacing: 3.5rem;
     animation: moveInLeft 0.5s ease-in-out;
+
+    @include respond(phone) {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+    }
   }
 
   &--sub {
@@ -26,6 +31,10 @@ body {
     margin-bottom: 4rem;
     animation: moveInRight 0.5s ease-in-out;
     /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+    }
   }
 }
 
@@ -39,6 +48,13 @@ body {
   text-transform: uppercase;
   -webkit-background-clip: text;
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-tertiary {
